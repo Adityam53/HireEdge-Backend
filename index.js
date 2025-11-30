@@ -44,8 +44,12 @@ const readAllJobs = async (filters = {}) => {
   try {
     const query = {};
 
-    if (filters.title) query.title = filters.title;
-
+    if (filters.title) {
+      query.title = {
+        $regex: filters.title,
+        $options: "i", // case-insensitive
+      };
+    }
     const allJobs = await Job.find(query);
     return allJobs;
   } catch (error) {
