@@ -68,7 +68,7 @@ app.get("/jobs", async (req, res) => {
     if (allJobs.length > 0) {
       res.status(200).json(allJobs);
     } else {
-      res.status(404).json({ error: "No jobs found." });
+      res.status(200).json([]);
     }
   } catch (error) {
     console.error("Failed to fetch jobs", error);
