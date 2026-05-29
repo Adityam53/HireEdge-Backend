@@ -51,7 +51,7 @@ project-root/
 ### 1. Clone the repository
 
 ```bash
-git clone <>
+git clone <https://github.com/Adityam53/HireEdge-Backend.git>
 open integrated terminal
 ```
 
@@ -71,7 +71,7 @@ MONGODB_URI=your_mongodb_connection_string
 ### 4. Start the server
 
 ```bash
-npm start
+npm start/npm run dev
 ```
 
 Server will run on:
